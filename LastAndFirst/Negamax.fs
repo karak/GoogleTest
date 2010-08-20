@@ -7,7 +7,25 @@ let reverse score =
     | Victory -> Defeat
     | Defeat -> Victory
 
-type Tree = Node of string * seq<Tree>
+[<CustomEquality>]
+[<NoComparison>]
+type Tree = Node of string * seq<Tree> with
+  override this.Equals obj =
+    match obj with
+    | :? Tree as other ->
+      match other with
+        Node (otherAnswer, otherChildren) ->
+        match this with
+        | Node (answer, children) ->
+          answer = otherAnswer && [for x in children -> x] = [for x in otherChildren -> x]
+          //NOTE: convert to list because sequence doesn't not compare by element
+    | _ -> false
+    
+  override this.GetHashCode () =
+    match this with
+    | Node (answer, _) -> answer.GetHashCode()
+    //ignore sequence
+  
 
 ///最善の評価値とその際の履歴を求める
 let rec findBestway (tree: Tree) : Score * string list =

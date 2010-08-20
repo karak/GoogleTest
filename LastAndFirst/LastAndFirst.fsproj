@@ -1,4 +1,4 @@
-<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectGuid>{2D8699B4-1171-4253-AC82-B135352E41C3}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -28,5 +28,6 @@
     <Compile Include="Move.fs" />
     <Compile Include="IPlayer.fs" />
     <Compile Include="Game.fs" />
+    <Compile Include="Negamax.fs" />
   </ItemGroup>
 </Project>

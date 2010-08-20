@@ -26,6 +26,7 @@
   <Import Project="$(MSBuildExtensionsPath)\FSharp\1.0\Microsoft.FSharp.Targets" />
   <ItemGroup>
     <Compile Include="GameSpec.fs" />
+    <Compile Include="NegamaxSpec.fs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LastAndFirst\LastAndFirst.fsproj">

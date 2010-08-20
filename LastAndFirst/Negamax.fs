@@ -11,18 +11,18 @@ let reverse score =
 type Tree = Node of string * Tree list
 
 ///最善の評価値とその際の履歴を求める
-let rec negamax (tree: Tree) : Score * string list =
+let rec findBestway (tree: Tree) : Score * string list =
    match tree with
    | Node (myAnswer, children) ->
-     let length = children.Length
-     if length = 0 then
+     if children.IsEmpty then
        (Defeat, [myAnswer])
      else
-       let next = children.Head
-       let (nextScore, nextHistory) = negamax next
-       if nextScore = Defeat then
-         (Victory, myAnswer :: nextHistory)
-       else if length = 1 then
-         ((reverse nextScore), myAnswer :: nextHistory)
-       else  //本当に子どもがいない場合と子どもの中にDefeatがない場合を区別する必要がある
-         negamax (Node(myAnswer, children.Tail))
+       let score, tail = findWorstWay children
+       (reverse score, myAnswer :: tail)
+and private findWorstWay (trees: Tree list)=
+ let next = trees.Head //assert trees is not empty
+ let nextScore, nextHistory = findBestway next
+ if nextScore = Defeat || trees.Tail.IsEmpty then
+   (nextScore, nextHistory)
+ else
+   findWorstWay trees.Tail

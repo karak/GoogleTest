@@ -30,5 +30,6 @@
     <Compile Include="Game.fs" />
     <Compile Include="Negamax.fs" />
     <Compile Include="Construction.fs" />
+    <Compile Include="Ai.fs" />
   </ItemGroup>
 </Project>

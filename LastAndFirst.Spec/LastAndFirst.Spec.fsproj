@@ -25,6 +25,7 @@
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\FSharp\1.0\Microsoft.FSharp.Targets" />
   <ItemGroup>
+    <Compile Include="AiSpec.fs" />
     <Compile Include="ConstructionSpec.fs" />
     <Compile Include="GameSpec.fs" />
     <Compile Include="NegamaxSpec.fs" />

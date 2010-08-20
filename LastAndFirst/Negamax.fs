@@ -7,13 +7,13 @@ let reverse score =
     | Victory -> Defeat
     | Defeat -> Victory
 
-///TODO: 巨大な木に対応するためには、遅延評価を実現できる必要がある
-type Tree = Node of string * Tree list
+type Tree = Node of string * seq<Tree>
 
 ///最善の評価値とその際の履歴を求める
 let rec findBestway (tree: Tree) : Score * string list =
    match tree with
-   | Node (myAnswer, children) ->
+   | Node (myAnswer, childrenSeq) ->
+     let children = [for x in childrenSeq -> x]
      if children.IsEmpty then
        (Defeat, [myAnswer])
      else

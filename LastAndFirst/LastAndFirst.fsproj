@@ -25,13 +25,15 @@
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\FSharp\1.0\Microsoft.FSharp.Targets" />
   <ItemGroup>
+    <Compile Include="Score.fs" />
     <Compile Include="Move.fs" />
     <Compile Include="IPlayer.fs" />
-    <Compile Include="Score.fs" />
     <Compile Include="Game.fs" />
     <Compile Include="Negamax.fs" />
     <Compile Include="Construction.fs" />
     <Compile Include="Ai.fs">
+    </Compile>
+    <Compile Include="Question.fs">
     </Compile>
   </ItemGroup>
 </Project>

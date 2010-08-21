@@ -28,6 +28,7 @@
     <Compile Include="AiSpec.fs" />
     <Compile Include="ConstructionSpec.fs" />
     <Compile Include="GameSpec.fs" />
+    <Compile Include="IntegrationSpec.fs" />
     <Compile Include="NegamaxSpec.fs" />
   </ItemGroup>
   <ItemGroup>

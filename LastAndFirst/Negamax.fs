@@ -1,12 +1,6 @@
 ﻿#light
 module LastAndFirst.Negamax
 
-type Score =  Victory | Defeat
-let reverse score =
-   match score with
-    | Victory -> Defeat
-    | Defeat -> Victory
-
 [<CustomEquality>]
 [<NoComparison>]
 type Tree = Node of string * seq<Tree> with
@@ -35,8 +29,8 @@ let rec findBestway (tree: Tree) : Score * string list =
      if children.IsEmpty then
        (Defeat, [myAnswer])
      else
-       let score, tail = findWorstWay children
-       (reverse score, myAnswer :: tail)
+       let (score:Score), tail = findWorstWay children
+       (score.Reversed, myAnswer :: tail)
 and private findWorstWay (trees: Tree list)=
  let next = trees.Head //assert trees is not empty
  let nextScore, nextHistory = findBestway next

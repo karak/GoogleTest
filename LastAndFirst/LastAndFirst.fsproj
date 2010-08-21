@@ -27,9 +27,11 @@
   <ItemGroup>
     <Compile Include="Move.fs" />
     <Compile Include="IPlayer.fs" />
+    <Compile Include="Score.fs" />
     <Compile Include="Game.fs" />
     <Compile Include="Negamax.fs" />
     <Compile Include="Construction.fs" />
-    <Compile Include="Ai.fs" />
+    <Compile Include="Ai.fs">
+    </Compile>
   </ItemGroup>
 </Project>

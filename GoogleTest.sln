@@ -6,6 +6,8 @@ Project("{982E8BC1-ACD7-4dbf-96AB-B2CE67D6A008}") = "LastAndFirst", "LastAndFirs
 EndProject
 Project("{982E8BC1-ACD7-4dbf-96AB-B2CE67D6A008}") = "LastAndFirst.Spec", "LastAndFirst.Spec\LastAndFirst.Spec.fsproj", "{706040CB-D37C-4E1E-B203-D476786AB8BA}"
 EndProject
+Project("{982E8BC1-ACD7-4dbf-96AB-B2CE67D6A008}") = "LastAndFirst.Assistant", "LastAndFirst.Assistant\LastAndFirst.Assistant.fsproj", "{9D080A6D-5EBB-4019-AFD0-2DECAE5060F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -20,5 +22,9 @@ Global
 		{706040CB-D37C-4E1E-B203-D476786AB8BA}.Debug|x86.ActiveCfg = Debug|x86
 		{706040CB-D37C-4E1E-B203-D476786AB8BA}.Release|x86.Build.0 = Release|x86
 		{706040CB-D37C-4E1E-B203-D476786AB8BA}.Release|x86.ActiveCfg = Release|x86
+		{9D080A6D-5EBB-4019-AFD0-2DECAE5060F1}.Debug|x86.Build.0 = Debug|x86
+		{9D080A6D-5EBB-4019-AFD0-2DECAE5060F1}.Debug|x86.ActiveCfg = Debug|x86
+		{9D080A6D-5EBB-4019-AFD0-2DECAE5060F1}.Release|x86.Build.0 = Release|x86
+		{9D080A6D-5EBB-4019-AFD0-2DECAE5060F1}.Release|x86.ActiveCfg = Release|x86
 	EndGlobalSection
 EndGlobal
